@@ -1,0 +1,26 @@
+{
+  "name": "production-autotests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options reportDir=colorjob,reportFilename=reports",
+    "onetest": "mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options reportDir=colorjob,reportFilename=reports test/checkOpenUserFormCreate.test.js",
+    "testp": "mocha --no-timeouts --parallel"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "chromedriver": "^125.0.2",
+    "devtools": "^8.36.1",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "node-imap": "^0.9.6",
+    "puppeteer": "^22.7.1",
+    "selenium-webdriver": "^4.22.0"
+  },
+  "description": ""
+}

@@ -1,0 +1,196 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-09T12:12:15.376Z",
+    "end": "2024-07-09T12:13:07.763Z",
+    "duration": 52387,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d7f4a13-8446-4250-a18c-a5c13e2cc2ee",
+      "title": "",
+      "fullFile": "C:\\git\\lambda\\test\\logInLogOut.test.js",
+      "file": "\\test\\logInLogOut.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+          "title": "Log In and Log Out Production, test-cases #1, 2",
+          "fullFile": "C:\\git\\lambda\\test\\logInLogOut.test.js",
+          "file": "\\test\\logInLogOut.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 \"before each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "timedOut": false,
+              "duration": 15317,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ltCapabilite.capability.browserName = browser;\nltCapabilite.capability.browserVersion = bVersion;\nltCapabilite.capability['LT:Options'].platformName = os;\ndriver = await new Builder()\n  .usingServer(gridUrl)\n  .withCapabilities(ltCapabilite.capability)\n  .build();",
+              "err": {},
+              "uuid": "fee58b4d-6bdb-4d15-bf27-51bdd93e7c2b",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 \"before each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "timedOut": false,
+              "duration": 8562,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ltCapabilite.capability.browserName = browser;\nltCapabilite.capability.browserVersion = bVersion;\nltCapabilite.capability['LT:Options'].platformName = os;\ndriver = await new Builder()\n  .usingServer(gridUrl)\n  .withCapabilities(ltCapabilite.capability)\n  .build();",
+              "err": {},
+              "uuid": "de860c26-a352-4649-af39-f1abb2e3c10d",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 \"after each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "timedOut": false,
+              "duration": 379,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "2e6ea875-dace-44a2-9a00-92b7cb8d78c4",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 \"after each\" hook in \"Log In and Log Out Production, test-cases #1, 2\"",
+              "timedOut": false,
+              "duration": 532,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n  await driver.quit();\n}",
+              "err": {},
+              "uuid": "54db5bfe-b903-402c-85ed-28365c0af743",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Log In and Log Out the Coloradojob production - Safari 17 on macOS Sonoma",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 Log In and Log Out the Coloradojob production - Safari 17 on macOS Sonoma",
+              "timedOut": false,
+              "duration": 4715,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(Date().toLocaleLowerCase(), 'date', config.urlLoginPage);\ntry {\n  const loginPageTest = new LoginPage(driver, config.urlLoginPage);\n  const logOutUserTest = new LogOut(driver);\n  await loginPageTest.openLoginForm();\n  await loginPageTest.fillEmailInput(config.email);\n  await loginPageTest.fillPasswordInput(config.password);\n  await loginPageTest.checkSaveForFuture();\n  await loginPageTest.login(config.urlHomePageForCheck);\n  await logOutUserTest.findUserMenu();\n  await logOutUserTest.userLogOut(config.urlLoginPage);\n  console.log('test passed');\n} catch (error) {\n  makeScreenshot(driver, 'auth_test');\n  throw error;\n}",
+              "err": {},
+              "uuid": "87a58f0f-5a5c-4de8-9f1f-820904744f0d",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Log In and Log Out the Coloradojob production - Chrome 126 on Windows 10",
+              "fullTitle": "Log In and Log Out Production, test-cases #1, 2 Log In and Log Out the Coloradojob production - Chrome 126 on Windows 10",
+              "timedOut": false,
+              "duration": 9377,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(Date().toLocaleLowerCase(), 'date', config.urlLoginPage);\ntry {\n  const loginPageTest = new LoginPage(driver, config.urlLoginPage);\n  const logOutUserTest = new LogOut(driver);\n  await loginPageTest.openLoginForm();\n  await loginPageTest.fillEmailInput(config.email);\n  await loginPageTest.fillPasswordInput(config.password);\n  await loginPageTest.checkSaveForFuture();\n  await loginPageTest.login(config.urlHomePageForCheck);\n  await logOutUserTest.findUserMenu();\n  await logOutUserTest.userLogOut(config.urlLoginPage);\n  console.log('test passed');\n} catch (error) {\n  makeScreenshot(driver, 'auth_test');\n  throw error;\n}",
+              "err": {},
+              "uuid": "d22b7201-ce78-4c39-b571-7207964f4d16",
+              "parentUUID": "ba4f4be7-ae9b-488d-8bc0-2537f59597b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87a58f0f-5a5c-4de8-9f1f-820904744f0d",
+            "d22b7201-ce78-4c39-b571-7207964f4d16"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14092,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "reports",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "colorjob",
+        "reportFilename": "reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
