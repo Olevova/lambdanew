@@ -49,7 +49,7 @@ describe('Log In and Log Out Production, test-cases #1, 2', function() {
         await loginPageTest.checkSaveForFuture();
         await loginPageTest.login(config.urlHomePageForCheck);
         await logOutUserTest.findUserMenu();
-        await logOutUserTest.userLogOut(config.urlLoginPage);
+        await logOutUserTest.userLogOut(config.urlLoginPa);
         console.log('test passed');
       } catch (error) {
         makeScreenshot(driver, 'auth_test');
