@@ -8,9 +8,10 @@ const capability = {
 		"build": "Test production",
 		"project": "Production",
 		"name":'login',
+		"console": true,
 		"network": true, 
 		"w3c": true,
-		"plugin": "node_js-node_js"
+		"plugin": "node_js-mocha"
 	}
 }
 module.exports = {capability}

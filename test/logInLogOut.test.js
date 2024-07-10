@@ -50,10 +50,13 @@ describe('Log In and Log Out Production, test-cases #1, 2', function() {
         await loginPageTest.login(config.urlHomePageForCheck);
         await logOutUserTest.findUserMenu();
         await logOutUserTest.userLogOut(config.urlLoginPage);
+        await driver.executeScript("lambda-status=passed");
         console.log('test passed');
       } catch (error) {
         makeScreenshot(driver, 'auth_test');
+        await driver.executeScript("lambda-status=failed");
         throw error;
+
       }
     });
   });
