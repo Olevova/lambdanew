@@ -7,6 +7,8 @@ const capability = {
 		"platformName": "macOS Sonoma",
 		"build": "Test production",
 		"project": "Production",
+		"name":'login',
+		"network": true, 
 		"w3c": true,
 		"plugin": "node_js-node_js"
 	}

@@ -25,7 +25,7 @@ describe('Log In and Log Out Production, test-cases #1, 2', function() {
       ltCapabilite.capability.browserName = browser;
       ltCapabilite.capability.browserVersion = bVersion;
       ltCapabilite.capability['LT:Options'].platformName = os;
-
+      ltCapabilite.capability['LT:Options'].name = `Log In and Log Out Production ${browser}`
       driver = await new Builder()
         .usingServer(gridUrl)
         .withCapabilities(ltCapabilite.capability)

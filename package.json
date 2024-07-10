@@ -6,7 +6,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options reportDir=colorjob,reportFilename=reports",
+    "test": "DEBUG=testomatio:* TESTOMATIO=tstmt_hPNdb80OrOnIZL94TWhW15LtzsXiprUlVw1719249035 npx mocha --no-timeouts -R ./node_modules/@testomatio/reporter/lib/adapter/mocha.js",
+    "test1": "mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options reportDir=colorjob,reportFilename=reports",
     "onetest": "mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options reportDir=colorjob,reportFilename=reports test/checkOpenUserFormCreate.test.js",
     "testp": "mocha --no-timeouts --parallel"
   },
